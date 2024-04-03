@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <section>
+        <div class="login-box">
+            <div class="column">
+                <form action="" id="registrationForm">
+                   
+
+                    <div id="inputFields">
+                        <h2>Registre</h2>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="nomInput" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom">Nom i Cognoms</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="nick" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom">Mal Nom</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" id="emailInput" required title="Correu electrònic - Debe ser una dirección de correo electrónico válida">
+                            <label>Correu electrònic</label>
+                            <error class="error" id="errorEmail"></error> <!-- Mensaje de error para el campo Correo Electrónico -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" id="emailInput2" required title="Comprobacio de correu electronic">
+                            <label>Comprobació Email</label>
+                            <error class="error" id="errorEmail2"></error> <!-- Mensaje de error para el campo Correo Electrónico (comprobación) -->
+                        </div>
+                    </div>
+
+                    <label id="sexo">
+                        <div class="radio-container">
+                            <texte class="texte3">* Sexe:</texte>
+                            <div class="radio-buttons">
+                                <label><input type="radio" name="sexo" value="Home"> Home</label>
+                                <label><input type="radio" name="sexo" value="Dona"> Dona</label>
+                                <label><input type="radio" name="sexo" value="Altres"> Altres</label>
+                            </div>
+                        </div>
+                    </label>
+                    <br>
+                    <h6 id="camposObligatorios">Tots els camps son obligatoris</h6>
+                    <br>
+
+                    <!--
+                    -->
+
+                    <div id="inputFields2">
+                        <h2>Domicili</h2>
+
+                        <div class="select-wrapper">
+                            <p id="tipo_via_text">Tri una via</p>
+                            <select id="tipo_via" name="tipo_via">
+                                <option value="">Trii una via</option>
+                                <option value="calle">Calle</option>
+                                <option value="avenida">Avenida</option>
+                                <option value="">Trii una via</option>
+                                <option value="calle">Calle</option>
+                                <option value="avenida">Avenida</option>
+                                <option value="">Trii una via</option>
+                                <option value="calle">Calle</option>
+                                <option value="avenida">Avenida</option>
+                                <!-- Agrega más opciones según sea necesario -->
+                            </select>
+                            <div class="select-arrow"></div>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="nomVia" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom">Nom de la via</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="codiPostal" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom">Codi Postal</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+                        <div class="contenedor-select">
+    <p id="pais_texto">Selecciona un país</p>
+    <select id="pais" name="pais">
+        <option value="">Selecciona un país</option>
+        <option value="AF">Afganistán</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Argelia</option>
+    <option value="AS">Samoa Americana</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AI">Anguila</option>
+    <option value="AQ">Antártida</option>
+    <option value="AG">Antigua y Barbuda</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AW">Aruba</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaiyán</option>
+    <option value="BS">Bahamas</option>
+    <option value="BH">Baréin</option>
+    <option value="BD">Bangladesh</option>
+    <option value="BB">Barbados</option>
+    <option value="BY">Bielorrusia</option>
+    <option value="BE">Bélgica</option>
+    <option value="BZ">Belice</option>
+    <option value="BJ">Benín</option>
+    <option value="BM">Bermudas</option>
+    <option value="BT">Bután</option>
+    <option value="BO">Bolivia</option>
+    <option value="BA">Bosnia y Herzegovina</option>
+    <option value="BW">Botsuana</option>
+    <option value="BR">Brasil</option>
+    <option value="IO">Territorio Británico del Océano Índico</option>
+    <option value="VG">Islas Vírgenes Británicas</option>
+    <option value="BN">Brunéi</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BF">Burkina Faso</option>
+    <option value="BI">Burundi</option>
+    <option value="KH">Camboya</option>
+    <option value="CM">Camerún</option>
+    <option value="CA">Canadá</option>
+    <option value="CV">Cabo Verde</option>
+    <option value="KY">Islas Caimán</option>
+    <option value="CF">República Centroafricana</option>
+    <option value="TD">Chad</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CX">Isla de Navidad</option>
+    <option value="CC">Islas Cocos</option>
+    <option value="CO">Colombia</option>
+    <option value="KM">Comoras</option>
+    <option value="CK">Islas Cook</option>
+    <option value="CR">Costa Rica</option>
+    <option value="HR">Croacia</option>
+    <option value="CU">Cuba</option>
+    <option value="CW">Curazao</option>
+    <option value="CY">Chipre</option>
+    <option value="CZ">República Checa</option>
+    <option value="CD">República Democrática del Congo</option>
+    <option value="DK">Dinamarca</option>
+    <option value="DJ">Yibuti</option>
+    <option value="DM">Dominica</option>
+    <option value="DO">República Dominicana</option>
+    <option value="EC">Ecuador</option>
+    <option value="EG">Egipto</option>
+    <option value="SV">El Salvador</option>
+    <option value="GQ">Guinea Ecuatorial</option>
+    <option value="ER">Eritrea</option>
+    <option value="EE">Estonia</option>
+    <option value="SZ">Esuatini</option>
+    <option value="ET">Etiopía</option>
+    <option value="FK">Islas Malvinas</option>
+    <option value="FO">Islas Feroe</option>
+    <option value="FJ">Fiyi</option>
+    <option value="FI">Finlandia</option>
+    <option value="FR">Francia</option>
+    <option value="GF">Guayana Francesa</option>
+    <option value="PF">Polinesia Francesa</option>
+    <option value="TF">Territorios Australes Franceses</option>
+    <option value="GA">Gabón</option>
+    <option value="GM">Gambia</option>
+    <option value="GE">Georgia</option>
+    <option value="DE">Alemania</option>
+    <option value="GH">Ghana</option>
+    <option value="GI">Gibraltar</option>
+    <option value="GR">Grecia</option>
+    <option value="GL">Groenlandia</option>
+    <option value="GD">Granada</option>
+    <option value="GP">Guadalupe</option>
+    <option value="GU">Guam</option>
+    <option value="GT">Guatemala</option>
+    <option value="GG">Guernsey</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-Bisáu</option>
+    <option value="GY">Guyana</option>
+    <option value="HT">Haití</option>
+    <option value="HN">Honduras</option>
+    <option value="HK">Hong Kong</option>
+    <option value="HU">Hungría</option>
+    <option value="IS">Islandia</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IR">Irán</option>
+    <option value="IQ">Iraq</option>
+    <option value="IE">Irlanda</option>
+    <option value="IM">Isla de Man</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italia</option>
+    <option value="CI">Costa de Marfil</option>
+    <option value="JM">Jamaica</option>
+    <option value="JP">Japón</option>
+    <option value="JE">Jersey</option>
+    <option value="JO">Jordania</option>
+    <option value="KZ">Kazajistán</option>
+    <option value="KE">Kenia</option>
+    <option value="KI">Kiribati</option>
+    <option value="XK">Kosovo</option>
+    <option value="KW">Kuwait</option>
+    <option value="KG">Kirguistán</option>
+    <option value="LA">Laos</option>
+    <option value="LV">Letonia</option>
+    <option value="LB">Líbano</option>
+    <option value="LS">Lesoto</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libia</option>
+    <option value="LI">Liechtenstein</option>
+    <option value="LT">Lituania</option>
+    <option value="LU">Luxemburgo</option>
+    <option value="MO">Macao</option>
+    <option value="MK">Macedonia del Norte</option>
+    <option value="MG">Madagascar</option>
+    <option value="MW">Malaui</option>
+    <option value="MY">Malasia</option>
+    <option value="MV">Maldivas</option>
+    <option value="ML">Malí</option>
+    <option value="MT">Malta</option>
+    <option value="MH">Islas Marshall</option>
+    <option value="MQ">Martinica</option>
+    <option value="MR">Mauritania</option>
+    <option value="MU">Mauricio</option>
+    <option value="YT">Mayotte</option>
+    <option value="MX">México</option>
+    <option value="FM">Micronesia</option>
+    <option value="MD">Moldavia</option>
+    <option value="MC">Mónaco</option>
+    <option value="MN">Mongolia</option>
+    <option value="ME">Montenegro</option>
+    <option value="MS">Montserrat</option>
+    <option value="MA">Marruecos</option>
+    <option value="MZ">Mozambique</option>
+    <option value="MM">Myanmar</option>
+    <option value="NA">Namibia</option>
+    <option value="NR">Nauru</option>
+    <option value="NP">Nepal</option>
+    <option value="NL">Países Bajos</option>
+    <option value="NC">Nueva Caledonia</option>
+    <option value="NZ">Nueva Zelanda</option>
+    <option value="NI">Nicaragua</option>
+    <option value="NE">Níger</option>
+    <option value="NG">Nigeria</option>
+    <option value="NU">Niue</option>
+    <option value="NF">Isla Norfolk</option>
+    <option value="KP">Corea del Norte</option>
+    <option value="MP">Islas Marianas del Norte</option>
+    <option value="NO">Noruega</option>
+    <option value="OM">Omán</option>
+    <option value="PK">Pakistán</option>
+    <option value="PW">Palaos</option>
+    <option value="PS">Palestina</option>
+    <option value="PA">Panamá</option>
+    <option value="PG">Papúa Nueva Guinea</option>
+    <option value="PY">Paraguay</option>
+    <option value="PE">Perú</option>
+    <option value="PH">Filipinas</option>
+    <option value="PN">Islas Pitcairn</option>
+    <option value="PL">Polonia</option>
+    <option value="PT">Portugal</option>
+    <option value="PR">Puerto Rico</option>
+    <option value="QA">Catar</option>
+    <option value="CG">República del Congo</option>
+    <option value="RE">Reunión</option>
+    <option value="RO">Rumanía</option>
+    <option value="RU">Rusia</option>
+    <option value="RW">Ruanda</option>
+    <option value="BL">San Bartolomé</option>
+    <option value="SH">Santa Elena</option>
+    <option value="KN">San Cristóbal y Nieves</option>
+    <option value="LC">Santa Lucía</option>
+    <option value="MF">San Martín</option>
+    <option value="PM">San Pedro y Miquelón</option>
+    <option value="VC">San Vicente y las Granadinas</option>
+    <option value="WS">Samoa</option>
+    <option value="SM">San Marino</option>
+    <option value="ST">Santo Tomé y Príncipe</option>
+    <option value="SA">Arabia Saudita</option>
+    <option value="SN">Senegal</option>
+    <option value="RS">Serbia</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leona</option>
+    <option value="SG">Singapur</option>
+    <option value="SX">Sint Maarten</option>
+    <option value="SK">Eslovaquia</option>
+    <option value="SI">Eslovenia</option>
+    <option value="SB">Islas Salomón</option>
+    <option value="SO">Somalia</option>
+    <option value="ZA">Sudáfrica</option>
+    <option value="GS">Islas Georgia del Sur y Sandwich del Sur</option>
+    <option value="KR">Corea del Sur</option>
+    <option value="SS">Sudán del Sur</option>
+    <option value="ES">España</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="SD">Sudán</option>
+        <!-- Agrega más opciones según sea necesario -->
+    </select>
+    <div class="flecha-select"></div>
+</div>
+
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" id="emailInput" required title="Correu electrònic - Debe ser una dirección de correo electrónico válida">
+                            <label>Correu electrònic</label>
+                            <error class="error" id="errorEmail"></error> <!-- Mensaje de error para el campo Correo Electrónico -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" id="emailInput2" required title="Comprobacio de correu electronic">
+                            <label>Correu electrònic </label>
+                            <error class="error" id="errorEmail2"></error> <!-- Mensaje de error para el campo Correo Electrónico (comprobación) -->
+                        </div>
+                    </div>
+
+                    <button type="button" id="submitButton" style="display: none;" onclick="validateForm()">Tornar enrere</button>
+                    <p id="p">Torna enrere per a <a class="iniciar" href="index.html">Iniciar sesio</a></p>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const validar = (selector, regular, errorMessageId) => {
+            let element = document.getElementById(selector);
+            let message = document.getElementById(errorMessageId);
+            if (element.value.length === 0) {
+                message.textContent = ""; // Cambiamos el mensaje a vacío
+                message.style.display = "none"; // Ocultamos el mensaje
+                element.style.boxShadow = "none"; // Quitamos la sombra
+                return false;
+            }
+            if (!regular.test(element.value)) {
+                message.textContent = "Valor invàlid";
+                element.style.boxShadow = "0 0 5px red"; // Agregamos sombra roja
+                message.style.display = "block";
+                return false;
+            }
+            message.textContent = "";
+            message.style.display = "none";
+            element.style.boxShadow = "none"; // Quitamos la sombra
+            return true;
+        }
+
+        /* Validación de los campos en tiempo real */
+        const validacionEnTiempoReal = (selector, regular, errorMessageId) => {
+            let inputElement = document.getElementById(selector);
+            inputElement.addEventListener('input', () => {
+                validar(selector, regular, errorMessageId);
+                checkSubmitButton(); // Llamamos a la función para verificar si se debe mostrar el botón de enviar
+            });
+        }
+
+        /* Función para verificar si se debe mostrar el botón de enviar */
+        const checkSubmitButton = () => {
+            let nomValido = validar("nomInput", /^[a-zA-ZÀ-ÿ\s']{3,}$/, "errorNom");
+            let emailValido = validar("emailInput", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail");
+            let email2Valido = validar("emailInput2", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail2");
+            let sexoMarcado = document.querySelector('input[name="sexo"]:checked');
+            let emailInputValue = document.getElementById("emailInput").value;
+            let emailInput2Value = document.getElementById("emailInput2").value;
+
+            // Mostramos el botón de enviar solo si todos los campos son válidos, los correos electrónicos coinciden y al menos un campo de sexo está marcado
+            if (nomValido && emailValido && email2Valido && sexoMarcado && emailInputValue === emailInput2Value) {
+                document.getElementById("submitButton").style.display = "block"; // Mostramos el botón ir atra
+                document.getElementById("inputFields").style.display = "none"; // Ocultamos los campos de entrada
+                document.getElementById("camposObligatorios").style.display = "none"; // Ocultamos el mensaje de campos obligatorios
+                document.getElementById("sexo").style.display = "none"; // Ocultamos el mensaje de campos obligatorios
+                document.getElementById("inputFields2").style.display = "block"; // Mostramos el botón ir atra
+                document.getElementById("p").style.display = "none"; // Ocultamos el mensaje de campos obligatorios
+
+
+            } else {
+                document.getElementById("submitButton").style.display = "none"; // Ocultamos el botón de enviar
+                document.getElementById("inputFields").style.display = "block"; // Mostramos los campos de entrada
+                document.getElementById("camposObligatorios").style.display = "block"; // Mostramos el mensaje de campos obligatorios
+                
+            }
+        }
+
+        /* Agregar eventos de validación en tiempo real a los campos */
+        validacionEnTiempoReal("nomInput", /^[a-zA-ZÀ-ÿ\s']{3,}$/, "errorNom");
+        validacionEnTiempoReal("emailInput", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail");
+        validacionEnTiempoReal("emailInput2", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail2");
+
+        // Agregar evento de cambio a los campos de sexo para verificar el botón de enviar
+        document.querySelectorAll('input[name="sexo"]').forEach((radio) => {
+            radio.addEventListener('change', checkSubmitButton);
+        });
+
+
+
+
+
+
+
+
+         // Obtiene los elementos necesarios
+         const selectWrapper = document.querySelector('.select-wrapper');
+        const select = selectWrapper.querySelector('select');
+        const selectArrow = selectWrapper.querySelector('.select-arrow');
+        const tipoViaText = document.getElementById('tipo_via_text');
+        const optionsList = document.createElement('ul');
+
+        // Crea la lista de opciones
+        Array.from(select.options).forEach(option => {
+            const li = document.createElement('li');
+            li.textContent = option.textContent;
+            li.setAttribute('data-value', option.value);
+            optionsList.appendChild(li);
+        });
+
+        // Agrega la lista de opciones al DOM
+        selectWrapper.appendChild(optionsList);
+
+        // Evento para abrir y cerrar el menú desplegable
+        selectWrapper.addEventListener('click', function(event) {
+            event.stopPropagation(); // Evita que el evento llegue al documento
+            this.classList.toggle('active');
+        });
+
+        // Evento para seleccionar una opción
+        optionsList.addEventListener('click', function(e) {
+            if (e.target.tagName === 'LI') {
+                const value = e.target.getAttribute('data-value');
+                select.value = value;
+                // Actualiza el texto del select personalizado
+                tipoViaText.textContent = value ? ` ${value}` : 'Tri una via';
+                // Oculta el menú desplegable
+            }
+        });
+
+        // Evento para ocultar el menú desplegable al cambiar la selección del select nativo
+        select.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            tipoViaText.textContent = selectedOption.value ? `Tri una via: ${selectedOption.value}` : 'Tri una via';
+            // Oculta el menú desplegable
+            selectWrapper.classList.remove('active');
+        });
+
+        // Evento para cerrar el menú desplegable al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            const isClickInside = selectWrapper.contains(event.target);
+            if (!isClickInside) {
+                selectWrapper.classList.remove('active');
+            }
+        });
+
+        // pais
+
+// Obtiene los elementos necesarios
+const paisSelectWrapper = document.querySelector('.contenedor-select');
+const paisSelect = paisSelectWrapper.querySelector('select');
+const paisArrow = paisSelectWrapper.querySelector('.flecha-select');
+const paisTexto = document.getElementById('pais_texto');
+const paisOptionsList = document.createElement('ul');
+
+// Crea la lista de opciones
+Array.from(paisSelect.options).forEach(option => {
+    const li = document.createElement('li');
+    li.textContent = option.textContent;
+    li.setAttribute('data-value', option.value);
+    paisOptionsList.appendChild(li);
+});
+
+// Agrega la lista de opciones al DOM
+paisSelectWrapper.appendChild(paisOptionsList);
+
+// Evento para abrir y cerrar el menú desplegable
+paisSelectWrapper.addEventListener('click', function(event) {
+    event.stopPropagation(); // Evita que el evento llegue al documento
+    this.classList.toggle('active');
+});
+
+// Evento para seleccionar una opción
+paisOptionsList.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        const value = e.target.getAttribute('data-value');
+        paisSelect.value = value;
+        // Actualiza el texto del select personalizado
+        paisTexto.textContent = value ? ` ${value}` : 'Selecciona un país';
+        // Oculta el menú desplegable
+        paisSelectWrapper.classList.remove('active');
+    }
+});
+
+// Evento para ocultar el menú desplegable al cambiar la selección del select nativo
+paisSelect.addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];
+    paisTexto.textContent = selectedOption.value ? `Selecciona un país: ${selectedOption.value}` : 'Selecciona un país';
+    // Oculta el menú desplegable
+    paisSelectWrapper.classList.remove('active');
+});
+
+// Evento para cerrar el menú desplegable al hacer clic fuera de él
+document.addEventListener('click', function(event) {
+    const isClickInside = paisSelectWrapper.contains(event.target);
+    if (!isClickInside) {
+        paisSelectWrapper.classList.remove('active');
+    }
+});
+
+        
+    </script>
+</body>
+
+</html>
